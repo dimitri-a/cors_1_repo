@@ -13,17 +13,20 @@ class App extends Component {
     debugger;
     axios.get('http://localhost:8080/companyInfo').then(
       (data) => {
-        this.setState({ companyInfo: data.companyInfo });
-      }
-    )
-    axios.get('http://localhost:8080/employees').then(
-      (data) => {
-        this.setState({ employees: data.employees });
+        debugger
+        this.setState({ companyInfo: data.data });
+        axios.get('http://localhost:8080/employees').then(
+          (data) => {
+            debugger
+            this.setState({ employees: data.data });
+          }
+        )
       }
     )
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className='container'>
         {/* <Header companyInfo={this.state.companyInfo}  /> */}
