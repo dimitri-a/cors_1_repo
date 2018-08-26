@@ -30,7 +30,6 @@ const setup = () => {
             ]
     };
 
-
     const renderer = createRenderer();
     renderer.render(<List {...props} />)
     const output = renderer.getRenderOutput()

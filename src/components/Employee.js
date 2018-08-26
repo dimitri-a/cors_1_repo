@@ -15,7 +15,6 @@ export default class Employee extends Component {
 
     render() {
         const {employee} =this.props
-
         return (
             <div>
                 <div className='hidden-xs' onClick={this.modalToggle}>
