@@ -10,14 +10,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    debugger;
     axios.get('http://localhost:8080/companyInfo').then(
       (data) => {
-        debugger
         this.setState({ companyInfo: data.data });
         axios.get('http://localhost:8080/employees').then(
           (data) => {
-            debugger
             this.setState({ employees: data.data });
           }
         )
