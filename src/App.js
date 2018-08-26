@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import List from './components/List';
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +25,10 @@ class App extends Component {
 
   render() {
     return (
-      <div></div>
+      <div className='container'>
+        {/* <Header companyInfo={this.state.companyInfo}  /> */}
+        <List employees={this.state.employees} />
+      </div>
     );
   }
 }
