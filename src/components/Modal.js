@@ -10,7 +10,28 @@ export default class Modal extends Component {
         return (
             <div>
                 <div className={containerClass}>
-                    hi modal
+                    <div className='hidden-xs'>
+                        <button onClick={this.toggle} className="close"/>
+                        <div className='employee'>
+                            <div className="col-lg-4 space">
+                                <img src={details.avatar} alt=""/>
+                                <div className='joined'>{details.jobTitle}</div>
+                                <div>{details.age}</div>
+                                <div>{new Date(details.dateJoined).toLocaleDateString()}</div>
+                            </div>
+
+                            <div className="col-lg-8 detail">
+                                <div>
+                                <span className='name'> {details.firstName} &nbsp;
+                                    {details.lastName}</span>
+                                    <hr/>
+                                    <div>
+                                        {details.bio.slice(0, 80)}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className={coverClass} onClick={this.toggle}></div>
             </div>
