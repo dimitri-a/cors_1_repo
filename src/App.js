@@ -23,7 +23,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className='container'>
         {/* <Header companyInfo={this.state.companyInfo}  /> */}
