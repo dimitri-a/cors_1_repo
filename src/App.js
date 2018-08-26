@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import List from './components/List';
-
+import Header from './components/Header';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        {/* <Header companyInfo={this.state.companyInfo}  /> */}
+        <Header companyInfo={this.state.companyInfo}  />
         <List employees={this.state.employees} />
       </div>
     );
