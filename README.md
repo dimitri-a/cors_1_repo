@@ -9,3 +9,7 @@ goto http://localhost:3000
 
 #### test:
 yarn test
+
+
+Cors off in package.json:  "dev-server": "json-server -p 8080 --nc json/sample-data.json"
+cors on so sharing enabled:  "dev-server": "json-server -p 8080 json/sample-data.json"

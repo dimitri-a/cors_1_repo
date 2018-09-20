@@ -10,10 +10,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8080/companyInfo').then(
+    axios.get('http://localhost:9900/companyInfo').then(
       (data) => {
         this.setState({ companyInfo: data.data });
-        axios.get('http://localhost:8080/employees').then(
+        axios.get('http://localhost:9900/employees').then(
           (data) => {
             this.setState({ employees: data.data });
           }
